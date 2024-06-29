@@ -176,3 +176,75 @@ if(legal_Age>=18){
    let AGE=20;
    let type=(AGE>21)?"Adult":"Minor";
    console.log(type);
+
+let ab = 5;
+let cd = 2;
+let ef = ab * cd;
+console.log(ef);
+
+console.log("function");
+
+function showString(){
+console.log("hello world");
+}
+showString();
+
+var showString = function(){
+   console.log("Arrow function hello world");
+}
+showString();
+
+//map function
+
+var number=[1,2,3,4,5];
+var square = number.map((num)=>{
+   return num * num;
+});
+console.log(square);
+
+var fruits=["apple","banana","strawberry"];
+var upperCase = fruits.map((fruit)=>{
+   return fruit.toUpperCase();
+   });
+   console.log(upperCase);
+
+  // enhanced object literals
+  
+  var name_="kai";
+  var age_= 29;
+
+  var people={
+   name_,
+   age_,
+   isStudent: true
+
+  }
+  console.log(people);
+
+  //destructuring
+
+  var people={
+   name_:"akil",
+   age_:21,
+   isStudent: true
+  }
+  var{name_,age_,isStudent}= people;
+  console.log(name_);
+  console.log(age_);
+  console.log(isStudent);
+
+  //promises
+
+  var promise = new Promise((resolve,reject)=>{
+setTimeout(()=>{
+   resolve("Promise resolved")
+   },2000);
+  })
+promise.then((result)=>{
+   console.log(result);})
+
+   //spread operator
+
+   var numbers=[1,2,3,4,5];
+   var newNumber=[...numbers,6,7,8];
+   console.log(newNumber);
